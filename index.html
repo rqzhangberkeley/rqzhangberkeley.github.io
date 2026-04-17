@@ -1,269 +1,381 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-
+<html lang="en">
 <head>
-
-  <title>Ruiqi Zhang's Homepage</title>
-
+  <title>Ruiqi Zhang | Homepage</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="description" content="Ruiqi Zhang is a Ph.D. student at the University of California, Berkeley.">
-  <meta name="keywords" content="Ruiqi Zhang, 张锐麒, ruiqi, Ruiqi, Zhang, Statistics, Berkeley, UC Berkeley, Deep Learning, Theory, Machine Learning, Large Language Models">
-  <meta name="author" content="Ruiqi Zhang" />
-
-  <link rel="stylesheet" href="w3.css">
-
+  <meta name="description" content="Ruiqi Zhang graduated from the Department of Statistics at the University of California, Berkeley.">
+  <meta name="keywords" content="Ruiqi Zhang, Zhang Ruiqi, Statistics, UC Berkeley, Machine Learning, Deep Learning, Large Language Models">
+  <meta name="author" content="Ruiqi Zhang">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-  .w3-sidebar a {font-family: "Roboto", sans-serif}
-  body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+    :root {
+      --bg: #f4f7fb;
+      --surface: #ffffff;
+      --ink: #12233a;
+      --muted: #4d6078;
+      --primary: #1155cc;
+      --accent: #00a3a3;
+      --line: #d6e0ef;
+      --shadow: 0 12px 30px rgba(11, 38, 82, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      line-height: 1.7;
+      color: var(--ink);
+      background: radial-gradient(circle at 10% 10%, #e7f0ff 0, #f4f7fb 40%, #f4f7fb 100%);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #083b92;
+      text-decoration: underline;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(244, 247, 251, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-family: "Playfair Display", serif;
+      font-size: 1.25rem;
+      color: var(--ink);
+      letter-spacing: 0.2px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .menu a:hover {
+      background: #eaf1ff;
+      text-decoration: none;
+      color: var(--primary);
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 240px;
+      border-radius: 16px;
+      border: 3px solid #d7e6ff;
+      box-shadow: 0 10px 24px rgba(17, 85, 204, 0.12);
+    }
+
+    h1, h2 {
+      margin: 0 0 12px;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.4rem, 2.3vw, 1.9rem);
+      color: #0d346d;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      margin: 0 0 10px;
+    }
+
+    .tagline {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #e6f7f7;
+      color: #0f5f5f;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .quick-links {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+
+    .section-note {
+      margin-top: -4px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .pub-list {
+      margin: 16px 0 0;
+      padding-left: 22px;
+    }
+
+    .pub-list li {
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .pub-list li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .pub-title {
+      font-weight: 700;
+      color: #102a4d;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .mini-card {
+      background: #fbfdff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .mini-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+      color: #0b3875;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .review-list {
+      margin: 8px 0 0;
+      padding-left: 18px;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero img {
+        max-width: 210px;
+      }
+
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
-
-  <!--
-  <script src="jquery.min.js"></script>
-  <script>
-  $(document).ready(function(){
-    // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
-
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
-
-        // Store hash
-        var hash = this.hash;
-
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 800, function(){
-
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        });
-      } // End if
-    });
-  });
-  </script>
-  //-->
-
 </head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Ruiqi Zhang</div>
+      <nav class="menu" aria-label="Main navigation">
+        <a href="#intro">Introduction</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#reviewing">Reviewing</a>
+        <a href="#other">Other</a>
+      </nav>
+    </div>
+  </header>
 
-
-<body class="w3-content" style="max-width:1000px">
-
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-collapse w3-top w3-right" style="z-index:3;width:150px" id="mySidebar">
-  <div class="w3-container w3-display-container w3-padding-16">
-    <h3><b>RUIQI</b></h3>
-  </div>
-  <div class="w3-padding-64 w3-text-light-grey w3-large" style="font-weight:bold">
-    <a href="#home" class="w3-bar-item w3-button">Home</a>
-    <a href="#publications" class="w3-bar-item w3-button">Publications</a>
-  </div>
-</nav>
-
-<!-- Top menu on small screens -->
-<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-  <div class="w3-bar-item w3-padding-24">RUIQI</div>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right"  style="font-stretch: extra-expanded;" onclick="w3_open()"><b>≡</b></a>
-  </div>
-</header>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:150px">
-
-  <!-- Push down content on small screens -->
-  <div class="w3-hide-large" style="margin-top:83px"></div>
-
-<!-- The Home Section -->
-    <div class="w3-container w3-center w3-padding-32" id="home">
-      <img style="width: 80%;max-width: 320px" alt="profile photo" src="images/RuiqiZhang.jpg">
-      <h1>Ruiqi Zhang</h1>
-        <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
-          I am a third-year Ph.D. in the Department of Statistics at the University of California, Berkeley, advised by Prof. <a href="https://www.stat.berkeley.edu/~bartlett/">Peter L. Bartlett</a></a>
-          and Prof. <a href="https://www.stat.berkeley.edu/~songmei/">Song Mei</a></a>
-          Previously, I got my bachelor's degree in the School of Mathematical Science(SMS) at Peking University(PKU), majoring in Mathematics and Statistics.
-          <br>
-          <br>
-          My research mainly focuses on the theory and application of modern Machine Learning(ML), Deep Learning(DL), and Large Language Models(LLMs). 
-          More specifically, currently, I focus on 
-          <br>
+  <main class="container">
+    <section class="card hero" id="intro">
+      <img src="images/RuiqiZhang.jpg" alt="Photo of Ruiqi Zhang">
+      <div class="intro">
+        <h1>Ruiqi Zhang</h1>
+        <div class="subtitle">Statistics, Machine Learning, and Large Language Models</div>
+        <p>
+          I recently graduated from the Department of Statistics at the University of California, Berkeley, where I was advised by Prof.
+          <a href="https://www.stat.berkeley.edu/~bartlett/">Peter L. Bartlett</a> and Prof.
+          <a href="https://www.stat.berkeley.edu/~songmei/">Song Mei</a>.
         </p>
-      
-      <!-- Bullet points start here -->
-      <ul style="width:100%;max-width:600px;margin-right:auto;margin-left:auto;">
-        <li><strong>Scalable and Efficient Alignment for Large Language Models Reasoning.</strong></li>
-        <li><strong>The Theory for Transformers, In-Context Learning, and Scaling Laws.</strong></li>
-        <li><strong>Topics in Deep Learning Theory, such as Implicit Bias and Edge of Stability.</strong></li>
-        <li><strong>Sequential Decision Making in Bandits and Reinforcement Learning.</strong></li>
-        <!-- Add more bullet points as needed -->
-      </ul>
-      <!-- Bullet points end here -->
-      
-        <p class="w3-center">
-          <a href="mailto:rqzhang@berkeley.edu">Email</a> &nbsp/&nbsp Language: Chinese, English. &nbsp/&nbsp Coding: Python, R, Matlab, LaTeX, Prompting GPT. 
-          <br>
-          Reviewer experience: ICML 2022,2024,2025, NIPS 2023,2024, NIPS 2023 R0-FoMo Workshop, NIPS 2023 Math+A Workshop, ICLR 2024, 2025, AISTATS 2024, 2025, TMLR, DMLR, JMLR.
+        <p>
+          Earlier, I earned my B.S. from the School of Mathematical Sciences (SMS) at Peking University (PKU), and during that period I worked with Prof. Hao Ge and Prof. Mengdi Wang.
         </p>
-        </tbody></table>
-  </div>
+        <p>
+          My research has focused on statistics, theoretical machine learning, and large language models. I will join Citadel Securities as a Quantitative Researcher starting in April 2026.
+        </p>
+        <span class="tagline">Open to research collaborations and discussions</span>
+        <div class="quick-links">
+          <a href="mailto:rqzhang@berkeley.edu">Email</a>
+          <span>Languages: Chinese, English</span>
+          <span>Coding: Python, R, Matlab, LaTeX</span>
+        </div>
+      </div>
+    </section>
 
-<!-- The Publications Section -->
-  <div class="w3-container w3-padding-32"" id="publications">
-    <h2>Publication</h2>
-                                                            
-    <ol>
-
-     <p>
-      <li><strong>SPEED-RL: Faster Training of Reasoning Models via Online Curriculum Learning.</strong>
-      <br>
-      <strong>Ruiqi Zhang</strong>, Daman Arora, Song Mei, Andrea Zanette.
-      <br>
-      <em>Submitted, 2025</em>
-    </p>
-
-     <p>
-      <li><strong>Minimax Optimal Convergence of Gradient Descent in Logistic Regression via Large and Adaptive Stepsizes.</strong>
-      <br>
-      <strong>Ruiqi Zhang</strong>, Jingfeng Wu, Licong Lin, Peter L. Bartlett.
-      <br>
-      <em>ICML, 2025</em> | <a style="color: #447ec9" href="https://arxiv.org/abs/2504.04105">Paper</a>
-    </p>
-
-     <p>
-      <li><strong>How Do Transformers Perform Two-Hop Reasoning in Context?</strong>
-      <br>
-      Tianyu Guo*, Hanlin Zhu*, <strong>Ruiqi Zhang</strong>, Jiantao Jiao, Song Mei, Michael I. Jordan, Stuart Russell.
-      <br>
-      <em>Submitted, 2025</em> | <a style="color: #447ec9" href="https://arxiv.org/abs/2502.13913">Paper</a>
-    </p>
-
-    <p>
-      <li><strong>Fast Best-of-N Decoding via Speculative Rejection.</strong>
-      <br>
-      Hanshi Sun*, Momin Haider*, <strong>Ruiqi Zhang*</strong>, Huitao Yang, Ming Yin, Mengdi Wang, Peter L. Bartlett, Andrea Zanette* <em> (* for core authors).</em>
-      <br>
-      <em>NIPS, 2024</em> | <a style="color: #447ec9" href="https://arxiv.org/abs/2410.20290">Paper</a>
-    </p>
-
-    <p>
-      <li><strong>Choose Your Anchor Wisely: Effective Unlearning Diffusion Models via Concept Reconditioning.</strong>
-      <br>
-      Jingyu Zhu*, <strong>Ruiqi Zhang*</strong>, Licong Lin, Song Mei <em> (* for co-first authors).</em>
-      <br>
-      <em>Submitted, 2024</em> | <a style="color: #447ec9" href="https://arxiv.org/abs/2404.05868">Paper</a>
-    </p>   
-
-    <p>
-      <li><strong>Simplicity Prevails: Rethinking Negative Preference Optimization for LLM Unlearning.</strong>
-      <br>
-      Chongyu Fan*, Jiancheng Liu*, Licong Lin*, Jinghan Jia, <strong>Ruiqi Zhang</strong>, Song Mei, Sijia Liu <em> (* for co-first authors).</em>
-      <br>
-      <em>Submitted, 2024</em> | <a style="color: #447ec9" href="https://arxiv.org/abs/2410.07163">Paper</a>
-    </p>   
-
-    <p>
-      <li><strong>Negative Preference Optimization: From Catastrophic Collapse to Effective Unlearning.</strong>
-      <br>
-      <strong>Ruiqi Zhang*</strong>, Licong Lin*, Yu Bai, Song Mei <em> (* for co-first authors).</em>
-      <br>
-      <em>COLM, 2024</em> | <a style="color: #447ec9" href="https://arxiv.org/abs/2404.05868">Paper</a>
-      </p>    
-
-    <p>
-      <li><strong>In-Context Learning of a Linear Transformer Block: Benefits of the MLP Component and One-Step GD Initialization.</strong>
-      <br>
-      <strong>Ruiqi Zhang</strong>, Jingfeng Wu, Peter L. Bartlett.
-      <br>
-      <em>NIPS, 2024</em> | <a style="color: #447ec9" href="https://arxiv.org/abs/2402.14951">Paper</a>
-      </p>    
-
-    <p>
-      <li><strong>Is Offline Decision Making Possible with Only Few Samples? Reliable Decisions in Data-Starved Bandits via Trust Region Enhancement.</strong>
-      <br>
-      <strong>Ruiqi Zhang</strong>, Yuexiang Zhai, Andrea Zanette.
-      <br>
-      <em>Submitted, 2024</em> | <a style="color: #447ec9" href="https://arxiv.org/abs/2402.15703">Paper</a>
-      </p>
-
-    <p>
-      <li><strong>AutoPRM: Automating Procedural Supervision for Multi-Step Reasoning via Controllable Question Decomposition.</strong>
-      <br>
-      Zhaorun Chen, Zhuokai Zhao, Zhihong Zhu, <strong>Ruiqi Zhang</strong>, Xiang Li, Bhiksha Raj, Huaxiu Yao.
-      <br>
-      <em>NAACL 2024</em> | <em>Prior version at ICLR 2024 Workshop on Reliable and Responsible Foundation Models</em> | <a style="color: #447ec9" href="https://arxiv.org/abs/2402.11452">Paper</a>
-      </p>
-
-    <p>
-      <li><strong>Trained Transformers Learn Linear Model In-Context.</strong>
-      <br>
-      <strong>Ruiqi Zhang</strong>, Spencer Frei, Peter L. Bartlett.
-      <br>
-      <em>Journal of Machine Learning Research (JMLR) 2024 25(49):1−55 | Prior version in NIPS 2023 Workshop on robustness of zero/few-shot learning in foundation models (R0-FoMo)</em> | <a style="color: #447ec9" href="https://arxiv.org/abs/2306.09927">Paper (Arxiv)</a> | <a style="color: #447ec9" href="https://www.jmlr.org/papers/v25/23-1042.html">Paper (JMLR)</a> | <a style="color: #447ec9" href="https://www.youtube.com/watch?v=_lf7CD8zRyQ">Talk by Spencer Frei</a>
-      </p>                                                        
-                                                            
-    <p>
-      <li><strong>Policy Finetuning in Reinforcement Learning via Design of Experiments using Offline Data.</strong>
-      <br>
-      <strong>Ruiqi Zhang</strong>, Andrea Zanette.
-      <br>
-      <em>NIPS 2023</em> |  <a style="color: #447ec9" href="https://arxiv.org/abs/2307.04354">Paper</a>
-    </p>                                                                                                                                                                                                  
-      
-      <p>
-      <li><strong>Off-Policy Fitted Q-Evaluation with Differentiable Function Approximators: Z-Estimation and Inference Theory.</strong>
-      <br>
-      <strong>Ruiqi Zhang</strong>, Xuezhou Zhang, Chengzhuo Ni, Mengdi Wang.
-      <br>
-      <em>ICML</em> 2022 | <em>RLDM</em> 2022 | <a style="color: #447ec9" href="https://arxiv.org/abs/2202.04970">Paper</a> | <a style="color: #447ec9" href="https://recorder-v3.slideslive.com/?share=69960&s=b8c6b7f6-d316-4152-84a8-82ed9574cf53">Talk</a>
-      </p>
-
-      <p>
-      <li><strong>Optimal Estimation of Off-Policy Policy Gradient via Double Fitted Iteration.</strong>
-      <br>
-      Chengzhuo Ni, <strong>Ruiqi Zhang</strong>, Xiang Ji, Xuezhou Zhang, Mengdi Wang.
-      <br>
-      <em>ICML</em> 2022 | <em>RLDM</em> 2022 | <a style="color: #447ec9" href="https://arxiv.org/abs/2202.00076">Paper</a>
-      </p>
-
+    <section class="card" id="publications">
+      <h2>Selected Publications</h2>
+      <p class="section-note">Representative papers spanning theory, reinforcement learning, and LLMs.</p>
+      <ol class="pub-list">
+        <li>
+          <div class="pub-title">Minimax Optimal Convergence of Gradient Descent in Logistic Regression via Large and Adaptive Stepsizes.</div>
+          <div><strong>Ruiqi Zhang</strong>, Jingfeng Wu, Licong Lin, Peter L. Bartlett.</div>
+          <div><em>JMLR, 2026</em> | <em>Initial version at ICML, 2025</em> | <a href="https://arxiv.org/abs/2504.04105">Paper</a></div>
+        </li>
+        <li>
+          <div class="pub-title">How Do Transformers Perform Two-Hop Reasoning in Context?</div>
+          <div>Tianyu Guo*, Hanlin Zhu*, <strong>Ruiqi Zhang</strong>, Jiantao Jiao, Song Mei, Michael I. Jordan, Stuart Russell.</div>
+          <div><em>2025</em> | <a href="https://arxiv.org/abs/2502.13913">Paper</a></div>
+        </li>
+        <li>
+          <div class="pub-title">Fast Best-of-N Decoding via Speculative Rejection.</div>
+          <div>Hanshi Sun*, Momin Haider*, <strong>Ruiqi Zhang*</strong>, Huitao Yang, Ming Yin, Mengdi Wang, Peter L. Bartlett, Andrea Zanette* <em>(* for core authors)</em>.</div>
+          <div><em>NeurIPS, 2024</em> | <a href="https://arxiv.org/abs/2410.20290">Paper</a></div>
+        </li>
+        <li>
+          <div class="pub-title">Choose Your Anchor Wisely: Effective Unlearning Diffusion Models via Concept Reconditioning.</div>
+          <div>Jingyu Zhu*, <strong>Ruiqi Zhang*</strong>, Licong Lin, Song Mei <em>(* for co-first authors)</em>.</div>
+          <div><em>NeurIPS Workshop, 2024</em> | <a href="https://arxiv.org/abs/2404.05868">Paper</a></div>
+        </li>
+        <li>
+          <div class="pub-title">Simplicity Prevails: Rethinking Negative Preference Optimization for LLM Unlearning.</div>
+          <div>Chongyu Fan*, Jiancheng Liu*, Licong Lin*, Jinghan Jia, <strong>Ruiqi Zhang</strong>, Song Mei, Sijia Liu <em>(* for co-first authors)</em>.</div>
+          <div><em>NeurIPS, 2025</em> | <a href="https://arxiv.org/abs/2410.07163">Paper</a></div>
+        </li>
+        <li>
+          <div class="pub-title">Negative Preference Optimization: From Catastrophic Collapse to Effective Unlearning.</div>
+          <div><strong>Ruiqi Zhang*</strong>, Licong Lin*, Yu Bai, Song Mei <em>(* for co-first authors)</em>.</div>
+          <div><em>COLM, 2024</em> | <a href="https://arxiv.org/abs/2404.05868">Paper</a></div>
+        </li>
+        <li>
+          <div class="pub-title">In-Context Learning of a Linear Transformer Block: Benefits of the MLP Component and One-Step GD Initialization.</div>
+          <div><strong>Ruiqi Zhang</strong>, Jingfeng Wu, Peter L. Bartlett.</div>
+          <div><em>NeurIPS, 2024</em> | <a href="https://arxiv.org/abs/2402.14951">Paper</a></div>
+        </li>
+        <li>
+          <div class="pub-title">Is Offline Decision Making Possible with Only Few Samples? Reliable Decisions in Data-Starved Bandits via Trust Region Enhancement.</div>
+          <div><strong>Ruiqi Zhang</strong>, Yuexiang Zhai, Andrea Zanette.</div>
+          <div><em>2024</em> | <a href="https://arxiv.org/abs/2402.15703">Paper</a></div>
+        </li>
+        <li>
+          <div class="pub-title">AutoPRM: Automating Procedural Supervision for Multi-Step Reasoning via Controllable Question Decomposition.</div>
+          <div>Zhaorun Chen, Zhuokai Zhao, Zhihong Zhu, <strong>Ruiqi Zhang</strong>, Xiang Li, Bhiksha Raj, Huaxiu Yao.</div>
+          <div><em>NAACL, 2024</em> | <a href="https://arxiv.org/abs/2402.11452">Paper</a></div>
+        </li>
+        <li>
+          <div class="pub-title">Trained Transformers Learn Linear Model In-Context.</div>
+          <div><strong>Ruiqi Zhang</strong>, Spencer Frei, Peter L. Bartlett.</div>
+          <div><em>JMLR, 2024</em> | <a href="https://arxiv.org/abs/2306.09927">Paper (ArXiv)</a> | <a href="https://www.jmlr.org/papers/v25/23-1042.html">Paper (JMLR)</a> | <a href="https://www.youtube.com/watch?v=_lf7CD8zRyQ">Talk</a></div>
+        </li>
+        <li>
+          <div class="pub-title">Policy Finetuning in Reinforcement Learning via Design of Experiments using Offline Data.</div>
+          <div><strong>Ruiqi Zhang</strong>, Andrea Zanette.</div>
+          <div><em>NeurIPS, 2023</em> | <a href="https://arxiv.org/abs/2307.04354">Paper</a></div>
+        </li>
+        <li>
+          <div class="pub-title">Off-Policy Fitted Q-Evaluation with Differentiable Function Approximators: Z-Estimation and Inference Theory.</div>
+          <div><strong>Ruiqi Zhang</strong>, Xuezhou Zhang, Chengzhuo Ni, Mengdi Wang.</div>
+          <div><em>ICML, 2022</em> | <em>RLDM, 2022</em> | <a href="https://arxiv.org/abs/2202.04970">Paper</a> | <a href="https://recorder-v3.slideslive.com/?share=69960&s=b8c6b7f6-d316-4152-84a8-82ed9574cf53">Talk</a></div>
+        </li>
+        <li>
+          <div class="pub-title">Optimal Estimation of Off-Policy Policy Gradient via Double Fitted Iteration.</div>
+          <div>Chengzhuo Ni, <strong>Ruiqi Zhang</strong>, Xiang Ji, Xuezhou Zhang, Mengdi Wang.</div>
+          <div><em>ICML, 2022</em> | <em>RLDM, 2022</em> | <a href="https://arxiv.org/abs/2202.00076">Paper</a></div>
+        </li>
       </ol>
-  </div>
+    </section>
 
-  <!-- End page content -->
-</div>
+    <section class="card meta-grid">
+      <div class="mini-card" id="teaching">
+        <h3>Teaching</h3>
+        <p>Teaching and mentoring updates will be posted here soon. Please check back for course and advising details.</p>
+      </div>
+      <div class="mini-card" id="reviewing">
+        <h3>Reviewing</h3>
+        <p>Conference and journal reviewing experience includes ICML, NeurIPS, ICLR, AISTATS, TMLR, DMLR, and JMLR.</p>
+        <ul class="review-list">
+          <li>Machine learning theory and optimization papers</li>
+          <li>LLM alignment, reasoning, and reinforcement learning</li>
+        </ul>
+      </div>
+    </section>
 
-<script>
-// Accordion 
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-// Click on the "Jeans" link on page load to open the accordion for demo purposes
-document.getElementById("myBtn").click();
-
-
-// Open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-</script>
-
+    <section class="card" id="other">
+      <h2>Other: Fellowships and Honors</h2>
+      <p class="section-note">A dedicated list of fellowships, honors, and selected talks can be added here as updates become available.</p>
+      <p>If you want, this section can be expanded with a year-by-year timeline and external links.</p>
+    </section>
+  </main>
 </body>
 </html>
