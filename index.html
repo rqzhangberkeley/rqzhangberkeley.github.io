@@ -206,6 +206,12 @@
       gap: 16px;
     }
 
+    .stacked-sections {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
     .mini-card {
       background: #fbfdff;
       border: 1px solid var(--line);
@@ -270,12 +276,11 @@
           <a href="https://www.stat.berkeley.edu/~songmei/">Song Mei</a>.
         </p>
         <p>
-          Earlier, I earned my B.S. from the School of Mathematical Sciences (SMS) at Peking University (PKU), and during that period I worked with Prof. Hao Ge and Prof. Mengdi Wang.
+          Earlier, I earned my B.S. from the School of Mathematical Sciences (SMS) at Peking University (PKU), and during that period I worked with Prof. <a href="http://faculty.bicmr.pku.edu.cn/~gehao/"></a>Hao Ge</a> and Prof. <a href="https://mwang-delta.vercel.app/">Mengdi Wang</a>.
         </p>
         <p>
           My research has focused on statistics, theoretical machine learning, and large language models. I will join Citadel Securities as a Quantitative Researcher starting in April 2026.
         </p>
-        <span class="tagline">Open to research collaborations and discussions</span>
         <div class="quick-links">
           <a href="mailto:rqzhang@berkeley.edu">Email</a>
           <span>Languages: Chinese, English</span>
@@ -356,25 +361,32 @@
       </ol>
     </section>
 
-    <section class="card meta-grid">
+    <section class="card stacked-sections">
       <div class="mini-card" id="teaching">
         <h3>Teaching</h3>
-        <p>Teaching and mentoring updates will be posted here soon. Please check back for course and advising details.</p>
+        <ul class="review-list">
+          <li>Fall 2024: STAT 154/254, Modern Statistical Prediction and Machine Learning.</li>
+          <li>Spring 2025: STAT 134, Concepts of Probability.</li>
+        </ul>
       </div>
       <div class="mini-card" id="reviewing">
         <h3>Reviewing</h3>
-        <p>Conference and journal reviewing experience includes ICML, NeurIPS, ICLR, AISTATS, TMLR, DMLR, and JMLR.</p>
         <ul class="review-list">
-          <li>Machine learning theory and optimization papers</li>
-          <li>LLM alignment, reasoning, and reinforcement learning</li>
+          <li>Conferences: ICML, NeurIPS, ICLR, CoLM, AISTATS.</li>
+          <li>Journals: TMLR, DMLR, JMLR.</li>
         </ul>
       </div>
-    </section>
-
-    <section class="card" id="other">
-      <h2>Other: Fellowships and Honors</h2>
-      <p class="section-note">A dedicated list of fellowships, honors, and selected talks can be added here as updates become available.</p>
-      <p>If you want, this section can be expanded with a year-by-year timeline and external links.</p>
+      <div class="mini-card" id="other">
+        <h3>Honors and Fellowships</h3>
+        <ul class="review-list">
+          <li>2025-2026: Citadel Fellowship at Berkeley.</li>
+          <li>2022-2024: Berkeley Fellowship.</li>
+          <li>2021: Huawei Fellowship.</li>
+          <li>2020: Qin and Jin Fellowship.</li>
+          <li>2019: Fangzheng Fellowship.</li>
+          <li>2019-2021: Honor Student in Peking University.</li>
+        </ul>
+      </div>
     </section>
   </main>
 </body>
